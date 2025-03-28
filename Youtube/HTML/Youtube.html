@@ -52,11 +52,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
       }
-      .videoGrid {
+      /*.videoGrid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 10px;
-      }
+      }*/
       .channel-picture {
       }
       .video-info {
@@ -292,38 +292,40 @@
         }
       }*/
 
-        /* Base styling for extra-small devices (default mobile-first design) */
-    .videoGrid {
-      grid-template-columns: 1fr;
-    }
-    
-    /* Small devices (max-width: 600px) */
-    @media (min-width: 601px) and (max-width: 750px) {
-      .videoGrid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    
-    /* Medium devices (min-width: 751px and max-width: 999px) */
-    @media (min-width: 751px) and (max-width: 999px) {
-      .videoGrid {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    }
-    
-    /* Large devices (min-width: 1000px and max-width: 1200px) */
-    @media (min-width: 1000px) and (max-width: 1200px) {
-      .videoGrid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
-    }
-    
-    /* Extra-large devices (min-width: 1201px and up) */
-    @media (min-width: 1201px) {
-      .videoGrid {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      }
-    }
+           /* Base styling for small screens (mobile-first) */
+.videoGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+/* Small devices (601px to 750px) */
+@media (min-width: 601px) and (max-width: 750px) {
+  .videoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Medium devices (751px to 999px) */
+@media (min-width: 751px) and (max-width: 999px) {
+  .videoGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Large devices (1000px to 1200px) */
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .videoGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Extra-large devices (1201px and up) */
+@media (min-width: 1201px) {
+  .videoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
 </style>
   </head>
   <body>
